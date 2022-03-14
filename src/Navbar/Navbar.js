@@ -10,9 +10,6 @@ const Navbar = () => {
             <Link to="/"><img src={logo} className="logo-img" alt="Logo" /></Link>
             <div className="nav-links">
                 <div className='nav-itm'><Link to="/" style={{textDecoration: "none", color: "#292942"}}><div>HOME</div></Link></div>
-                <div className='nav-itm'><Link to="/Electronics" style={{textDecoration: "none", color: "#292942"}}><div>ELECTRONICS</div></Link></div>
-                <div className='nav-itm'><Link to="/Fashion" style={{textDecoration: "none", color: "#292942"}}><div>FASHION</div></Link></div>
-                <div className='nav-itm'><Link to="/Grocery" style={{textDecoration: "none", color: "#292942"}}><div>GROCERY</div></Link></div>
                 <div className='nav-itm'><Link to="/Signin" style={{textDecoration: "none", color: "#292942"}}><div>SIGN IN</div></Link></div>
                 <div className='nav-itm'><Link to="/Signup" style={{textDecoration: "none", color: "#292942"}}><div>SIGN UP</div></Link></div>
                 <div><Link to="/Cart"><img src={cartIcon} className="cart-img" alt="Cart" /></Link></div>
