@@ -4,21 +4,35 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Router>
+          <Navbar />
+          <div className="content">
+            <Switch>
+              <Route exact path="/">
+                <Homepage />
+              </Route>
+              <Route exact path="/Electronics">
+                <Electronics handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
+              </Route>
+              <Route exact path="/Fashion">
+                <Fashion handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
+              </Route>
+              <Route exact path="/Grocery">
+                <Grocery handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
+              </Route>
+              <Route exact path="/Cart" >
+                <Cart cart={this.state.cart} price={this.state.price}  />
+              </Route>
+              <Route exact path="/Signin" >
+                <Signin />
+              </Route>
+              <Route exact path="/Signup" >
+                <Signup />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </div>
   );
 }
 
