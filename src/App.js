@@ -71,9 +71,9 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route exact path="/">
-                <Homepage />
+                <Homepage handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
               </Route>
-              
+
               <Route exact path="/Cart" >
                 <Cart cart={this.state.cart} price={this.state.price}  />
               </Route>
