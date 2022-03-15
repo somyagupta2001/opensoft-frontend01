@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from "react";
-import upIcon from '../icons/up.png';
-import downIcon from '../icons/down.png';
+import upIcon from './icons/up.png';
+import downIcon from './icons/down.png';
 import './ProductCard.css';
 
 const ProductCard = (props) => {

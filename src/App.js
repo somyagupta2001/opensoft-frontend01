@@ -73,15 +73,7 @@ class App extends Component {
               <Route exact path="/">
                 <Homepage handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
               </Route>
-              {/* <Route exact path="/Electronics">
-                <Electronics handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
-              </Route>
-              <Route exact path="/Fashion">
-                <Fashion handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
-              </Route>
-              <Route exact path="/Grocery">
-                <Grocery handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
-              </Route> */}
+
               <Route exact path="/Cart" >
                 <Cart cart={this.state.cart} price={this.state.price}  />
               </Route>
