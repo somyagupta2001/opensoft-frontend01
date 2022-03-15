@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import coverImage from "../images/cover.jpg";
+import coverImage from "../images/cover.jpg";
 import "./Homepage.css";
 
 const Homepage = () => {

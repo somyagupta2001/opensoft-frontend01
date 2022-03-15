@@ -3,9 +3,6 @@ import React, { Component } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import Homepage from "./Homepage/Homepage";
-import Electronics from "./Categories/Electronics";
-import Fashion from "./Categories/Fashion";
-import Grocery from "./Categories/Grocery";
 import Cart from "./Cart/Cart";
 import Signin from "./SigninNSignup/Signin";
 import Signup from "./SigninNSignup/Signup";
@@ -74,9 +71,9 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route exact path="/">
-                <Homepage />
+                <Homepage handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
               </Route>
-              <Route exact path="/Electronics">
+              {/* <Route exact path="/Electronics">
                 <Electronics handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
               </Route>
               <Route exact path="/Fashion">
@@ -84,7 +81,7 @@ class App extends Component {
               </Route>
               <Route exact path="/Grocery">
                 <Grocery handlers={[this.addHandler, this.increaseHandler, this.decreaseHandler, this.returnCount]} />
-              </Route>
+              </Route> */}
               <Route exact path="/Cart" >
                 <Cart cart={this.state.cart} price={this.state.price}  />
               </Route>
